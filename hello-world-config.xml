@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><project>
+  <actions/>
+  <description>My first JJB job&lt;!-- Managed by Jenkins Job Builder --&gt;</description>
+  <keepDependencies>false</keepDependencies>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <concurrentBuild>false</concurrentBuild>
+  <canRoam>true</canRoam>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>echo "Hello from Jenkins Job Builder!"
+echo "Build number: $BUILD_NUMBER"
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

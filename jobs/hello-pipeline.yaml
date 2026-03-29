@@ -1,0 +1,21 @@
+- job:
+    name: hello-pipeline
+    description: My first JJB pipeline job
+    project-type: pipeline
+    dsl: |
+      pipeline {{
+          agent any
+          stages {{
+              stage('Hello') {{
+                  steps {{
+                      echo "Hello from Jenkins Job Builder Pipeline!"
+                      echo "Build number: ${{env.BUILD_NUMBER}}"
+                  }}
+              }}
+              stage('Done') {{
+                  steps {{
+                      echo "Pipeline complete!"
+                  }}
+              }}
+          }}
+      }}

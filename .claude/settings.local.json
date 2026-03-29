@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip show:*)",
+      "Bash(pip --version)",
+      "Bash(java --version)",
+      "Bash(docker --version)",
+      "Bash(docker run:*)",
+      "Bash(docker exec:*)",
+      "Bash(curl:*)",
+      "Bash(docker stop:*)",
+      "Bash(docker rm:*)",
+      "Bash(pip install:*)",
+      "Bash(jenkins-jobs:*)"
+    ]
+  }
+}

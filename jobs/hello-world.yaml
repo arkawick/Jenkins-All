@@ -1,0 +1,8 @@
+- job:
+    name: hello-world
+    description: My first JJB job
+    project-type: freestyle
+    builders:
+      - shell: |
+          echo "Hello from Jenkins Job Builder!"
+          echo "Build number: $BUILD_NUMBER"

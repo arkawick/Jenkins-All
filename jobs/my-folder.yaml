@@ -1,0 +1,29 @@
+- job:
+    name: my-folder
+    project-type: folder
+    description: My first folder
+
+- job:
+    name: my-folder/hello-world
+    description: Freestyle job inside a folder
+    project-type: freestyle
+    builders:
+      - shell: |
+          echo "Hello from inside a folder!"
+          echo "Build number: $BUILD_NUMBER"
+
+- job:
+    name: my-folder/hello-pipeline
+    description: Pipeline job inside a folder
+    project-type: pipeline
+    dsl: |
+      pipeline {{
+          agent any
+          stages {{
+              stage('Hello') {{
+                  steps {{
+                      echo "Hello from pipeline inside a folder!"
+                  }}
+              }}
+          }}
+      }}
