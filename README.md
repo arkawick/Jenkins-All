@@ -17,10 +17,7 @@ Local Jenkins setup with Jenkins Job Builder (JJB) for managing jobs as code.
 ### 1. Start Jenkins
 
 ```bash
-docker run -d --name jenkins \
-  -p 8090:8080 -p 50000:50000 \
-  -v jenkins_home:/var/jenkins_home \
-  jenkins/jenkins:lts
+docker run -d --name jenkins -p 8090:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
 ```
 
 > **Note:** Port 8090 is used instead of the default 8080 to avoid conflicts with other services like Apache Tomcat that also default to 8080.
